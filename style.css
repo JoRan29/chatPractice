@@ -1,0 +1,51 @@
+body {
+  text-align: center;
+  color: rgb(161, 5, 161);
+  min-height: 100vh;
+  background-image: linear-gradient(white, pink);
+  font-family: "Baloo Da 2", cursive;
+}
+
+h1 {
+  -webkit-text-stroke: 1px rgb(161, 5, 161);
+  -webkit-text-fill-color: palevioletred;
+  font-size: 50px;
+  text-shadow: grey 2px 2px;
+}
+
+.btn {
+  width: 22%;
+  height: 40px;
+  font-size: 15px;
+  background-color: palevioletred;
+  color: antiquewhite;
+  border: 0;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: rgb(201, 104, 136);
+  cursor: pointer;
+}
+
+form {
+  margin: 15px;
+}
+
+input {
+  width: 400px;
+  height: 30px;
+  font-size: 15px;
+  border-radius: 5px;
+  padding: 5px;
+  color: rgb(161, 5, 161);
+}
+
+input:focus {
+  border: rgba(128, 0, 128, 0.534) solid 2px;
+}
+
+input:focus,
+.btn:focus {
+  outline-width: 0;
+}
