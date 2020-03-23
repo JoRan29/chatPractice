@@ -23,7 +23,7 @@ let checkUsername = () => {
 
 // Objects
 let chatroom1 = new Chatroom(checkUsername(), "js");
-console.log(chatroom1);
+// console.log(chatroom1);
 
 let chatUI = new ChatUI(chatlist);
 

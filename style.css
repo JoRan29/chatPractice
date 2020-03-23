@@ -2,6 +2,8 @@ body {
   text-align: center;
   color: rgb(161, 5, 161);
   min-height: 100vh;
+  height: 100%;
+  width: 100%;
   background-image: linear-gradient(white, pink);
   font-family: "Baloo Da 2", cursive;
 }
@@ -9,12 +11,33 @@ body {
 h1 {
   -webkit-text-stroke: 1px rgb(161, 5, 161);
   -webkit-text-fill-color: palevioletred;
-  font-size: 50px;
+  font-size: 59px;
   text-shadow: grey 2px 2px;
 }
 
 #ulMessages {
   list-style-type: none;
+  font-size: 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 25%;
+  bottom: 20%;
+  overflow: hidden;
+  /* poravnati text levo */
+  text-align: left;
+  width: 400px;
+  margin: 0 auto;
+  /* scroll */
+  overflow-y: auto;
+  /* Brekas long words even with no space */
+  word-wrap: break-word;
+}
+
+#ulMessages > li {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: grey solid 1px;
 }
 
 .btn {
@@ -60,4 +83,21 @@ input:focus,
 
 .date {
   color: rgba(128, 128, 128, 0.692);
+}
+
+#top {
+  position: absolute;
+  height: 25%;
+  left: 0;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+}
+
+#bottom {
+  position: absolute;
+  height: 20%;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }

@@ -11,19 +11,21 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!--Naslov-->
-    <header>
-      <h1>itBootcamp Chat</h1>
-      <h2>choose a chatroom</h2>
-    </header>
+    <div id="top">
+      <!--Naslov-->
+      <header>
+        <h1>itBootcamp Chat</h1>
+        <h2>choose a chatroom</h2>
+      </header>
 
-    <!--Chatrooms-->
-    <nav>
-      <button id="general" class="btn">#general</button>
-      <button id="js" class="btn">#js</button>
-      <button id="homework" class="btn">#homework</button>
-      <button id="test" class="btn">#test</button>
-    </nav>
+      <!--Chatrooms-->
+      <nav>
+        <button id="general" class="btn">#general</button>
+        <button id="js" class="btn">#js</button>
+        <button id="homework" class="btn">#homework</button>
+        <button id="test" class="btn">#test</button>
+      </nav>
+    </div>
 
     <!--Message Window-->
     <section>
@@ -32,28 +34,30 @@
       </ul>
     </section>
 
-    <!--Form - Message Input-->
-    <form action="" id="formMessage">
-      <input
-        type="text"
-        name=""
-        id="inputMessage"
-        placeholder="Type your message..."
-      />
-      <input type="submit" value="Send" id="btnSend" class="btn" />
-    </form>
+    <div id="bottom">
+      <!--Form - Message Input-->
+      <form action="" id="formMessage">
+        <input
+          type="text"
+          name=""
+          id="inputMessage"
+          placeholder="Type your message..."
+        />
+        <input type="submit" value="Send" id="btnSend" class="btn" />
+      </form>
 
-    <!--Form - Username Change-->
-    <form action="" id="formUsername">
-      <input
-        type="text"
-        name=""
-        id="inputUsername"
-        placeholder="Update username"
-      />
-      <input type="submit" value="Update" id="btnUpdate" class="btn" />
-    </form>
-    <div id="divUpdatedUsername"></div>
+      <!--Form - Username Change-->
+      <form action="" id="formUsername">
+        <input
+          type="text"
+          name=""
+          id="inputUsername"
+          placeholder="Update username"
+        />
+        <input type="submit" value="Update" id="btnUpdate" class="btn" />
+      </form>
+      <div id="divUpdatedUsername"></div>
+    </div>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
