@@ -12,7 +12,12 @@ export class Chatroom {
     return this._username;
   }
   set username(u) {
-    this._username = u;
+    let patternUsername = /^\S*$/;
+    if (patternUsername.test(u)) {
+      this._username = u;
+    } else {
+      alert("Username not valid!");
+    }
   }
   get room() {
     return this._room;
@@ -69,36 +74,3 @@ export class Chatroom {
     }
   }
 }
-
-// // New object from class Chatroom
-// let chatroom1 = new Chatroom("JoRan", "general");
-
-// // chatroom1
-// //   .addChat("Zdravo!")
-// //   .then(() => {
-// //     console.log("Chat added!");
-// //   })
-// //   .catch(err => {
-// //     console.error(`${err}`);
-// //   });
-
-// chatroom1.updateRoom("js");
-
-// chatroom1.getChats(data => {
-//   console.log(data);
-// });
-
-// // chatroom1.updateRoom("general");
-
-// // chatroom1.getChats(data => {
-// //   console.log(data);
-// // });
-
-// setTimeout(() => {
-//   chatroom1.updateRoom("js");
-//   chatroom1.updateUsername("Tina");
-//   chatroom1.getChats(data => {
-//     console.log(data);
-//   });
-//   chatroom1.addChat("How are you, Brad?");
-// }, 3000);
