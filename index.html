@@ -19,15 +19,15 @@
 
     <!--Chatrooms-->
     <nav>
-      <button id="btnGeneral" class="btn">#general</button>
-      <button id="btnJs" class="btn">#js</button>
-      <button id="btnHomework" class="btn">#homework</button>
-      <button id="btnTest" class="btn">#test</button>
+      <button id="general" class="btn">#general</button>
+      <button id="js" class="btn">#js</button>
+      <button id="homework" class="btn">#homework</button>
+      <button id="test" class="btn">#test</button>
     </nav>
 
     <!--Message Window-->
     <section>
-      <ul>
+      <ul id="ulMessages">
         <!--Messages-->
       </ul>
     </section>
@@ -53,6 +53,7 @@
       />
       <input type="submit" value="Update" id="btnUpdate" class="btn" />
     </form>
+    <div id="divUpdatedUsername"></div>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
@@ -75,6 +76,8 @@
       firebase.initializeApp(firebaseConfig);
       let db = firebase.firestore();
     </script>
-    <script src="chat.js"></script>
+    <script type="module" src="app.js"></script>
+    <script type="module" src="chat.js"></script>
+    <script type="module" src="ui.js"></script>
   </body>
 </html>
