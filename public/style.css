@@ -4,19 +4,15 @@ body {
   min-height: 100vh;
   height: 100%;
   width: 100%;
-  background-image: linear-gradient(white, pink);
+  background-image: linear-gradient(white, #dd5e8885);
   font-family: "Baloo Da 2", cursive;
 }
 
 h1 {
-  -webkit-text-stroke: 1px rgb(161, 5, 161);
-  -webkit-text-fill-color: palevioletred;
-  font-size: 35px;
+  -webkit-text-stroke: 0.5px #dd5e89;
+  -webkit-text-fill-color: #f7bb97;
+  font-size: 36px;
   text-shadow: grey 2px 2px;
-}
-
-h2 {
-  font-size: 10px;
 }
 
 #ulMessages {
@@ -38,34 +34,74 @@ h2 {
   word-wrap: break-word;
 }
 
+#ul::-webkit-scrollbar {
+  display: none;
+}
+
 #ulMessages > li {
   margin-bottom: 10px;
   padding-bottom: 5px;
   border-radius: 0px 12px 12px 12px;
   width: 60%;
   padding: 14px;
-  background-color: rgba(128, 128, 128, 0.486);
+  background-color: #dd5e88be;
+  color: white;
 }
 
 .me {
   margin-left: auto;
-  background-color: rgba(255, 105, 180, 0.5) !important;
+  background-color: #f7bb97 !important;
   border-radius: 12px 0px 12px 12px !important;
 }
 
-.btn {
-  width: 22%;
+/* .btn {
+  width: 15%;
   height: 40px;
   font-size: 15px;
   background-color: palevioletred;
   color: antiquewhite;
   border: 0;
   border-radius: 5px;
+  margin-bottom: 2px;
 }
 
 .btn:hover {
   background-color: rgb(201, 104, 136);
   cursor: pointer;
+} */
+
+.btn {
+  width: 15%;
+  height: 40px;
+  font-size: 15px;
+  border: 0;
+  margin-bottom: 18px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: #fff;
+  box-shadow: 0 0 10px #eee;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+  border-radius: 15px;
+  z-index: 3;
+}
+.btn:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  margin: 1px 3px 5px;
+}
+.btn {
+  background-image: linear-gradient(
+    to right,
+    #dd5e89 0%,
+    #f7bb97 51%,
+    #dd5e89 100%
+  );
+}
+.btn:hover {
+  background-position: right center;
 }
 
 form {
@@ -78,11 +114,11 @@ input {
   font-size: 15px;
   border-radius: 5px;
   padding: 5px;
-  color: rgb(161, 5, 161);
+  color: #dd5e89;
 }
 
 input:focus {
-  border: rgba(128, 0, 128, 0.534) solid 2px;
+  border: #dd5e88be solid 2px;
 }
 
 input:focus,
@@ -95,7 +131,7 @@ input:focus,
 }
 
 .date {
-  color: rgba(128, 128, 128, 0.692);
+  color: rgba(128, 128, 128, 0.5);
 }
 
 #top {

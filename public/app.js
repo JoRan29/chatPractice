@@ -74,7 +74,11 @@ formUsr.addEventListener("submit", e => {
   chatroom1.updateUsername(usr);
   formUsr.reset();
   // show new msg for 3 sec for updated username
-  divUpdatedUsername.innerHTML = `Username has been updated to <span id="spanUsername">${usr} </span>!`;
+  let patternUsername = /^\S*$/;
+  if (patternUsername.test(usr)) {
+    divUpdatedUsername.innerHTML = `Username has been updated to <span id="spanUsername">${usr}</span>!`;
+  }
+  // divUpdatedUsername.innerHTML = `Username has been updated to <span id="spanUsername">${usr}</span>!`;
   setTimeout(() => {
     divUpdatedUsername.innerHTML = ``;
   }, 3000);
