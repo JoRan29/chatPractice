@@ -15,14 +15,27 @@ export class ChatUI {
     let h = date.getHours();
     let min = date.getMinutes();
 
+    let currentDate = new Date();
+    let cDay = currentDate.getDate();
+    let cm = date.getMonth() + 1;
+    let cy = date.getFullYear();
+
+    let strDate = "";
+
     // Turning dates into string and setting 0 before single-digit numbers
     d = String(d).padStart(2, "0");
     m = String(m).padStart(2, "0");
     min = String(min).padStart(2, "0");
     h = String(h).padStart(2, "0");
 
-    let strDate = d + "." + m + "." + y + "." + " - " + h + ":" + min;
-    return strDate;
+    // Present or Past Messages
+    if (d == cDay && m == cm && y == cy) {
+      strDate = h + ":" + min;
+      return strDate;
+    } else {
+      strDate = d + "." + m + "." + y + "." + " - " + h + ":" + min;
+      return strDate;
+    }
   }
   // method for making li items template
   // data is object, doc from db
@@ -38,7 +51,7 @@ export class ChatUI {
     htmlLI += `
     <span class="username">${data.username}:</span> 
     <span class="message">${data.message}</span>
-    <div class="date">${strDate}</div>
+    <div class="date">${strDate} <span id="bin"><img width="25px" src="https://lh3.googleusercontent.com/proxy/X2xIlW7QpuSfNmFH2e6ODo3s8C_5QrsESxjZUESarpMPi5gMO4XiAU8XwLwglSz5VDUHB1RCVeOi6gobtTgTsRQ5E3096BmZiIDVWJjd1DUh4pKWoQ"> </span></div>
     </li>`;
     this.list.innerHTML += htmlLI;
     this.list.scrollTop = this.list.scrollHeight;

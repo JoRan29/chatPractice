@@ -12,6 +12,14 @@ let rooms = document.querySelector("nav");
 let divUpdatedUsername = document.querySelector("#divUpdatedUsername");
 let buttons = document.querySelectorAll("button");
 
+let formClr = document.querySelector("#formClr");
+let inputClr = document.querySelector("#inputClr");
+
+let formSet = document.querySelector("#formSet");
+let btnDate = document.querySelector("#btnDate");
+let inputFrom = document.querySelector("#from");
+let inputTo = document.querySelector("#to");
+
 // Checking username in LocalStorage
 
 let checkUsername = () => {
@@ -114,5 +122,68 @@ rooms.addEventListener("click", e => {
       //   console.log(data);
       chatUI.templateLI(data);
     });
+  }
+});
+
+// Color Changer
+
+formClr.addEventListener("submit", e => {
+  e.preventDefault();
+  let color = inputClr.value;
+  setTimeout(() => {
+    document.body.style.backgroundColor = color;
+  }, 500);
+  localStorage.setItem("colorLS", color);
+});
+
+let clr = localStorage.getItem("colorLS");
+
+document.body.style.backgroundColor = clr;
+
+// Set Date
+
+console.log(chatUI);
+
+formSet.addEventListener("submit", e => {
+  e.preventDefault();
+  let from = inputFrom.value;
+  let to = inputTo.value;
+  console.log(from, to);
+  chatUI.clear();
+  if (from == "" && to == "") {
+    chatroom1.getChats(data => {
+      //   console.log(data);
+      chatUI.templateLI(data);
+    });
+  } else if (from != "" && to != "") {
+    chatroom1.getChats(data => {
+      let date = data.created_at.toDate();
+      // let msgDate = formatDate(date);
+      console.log(date);
+      // chatUI.templateLI(data);
+      if (data.created_at > from && data.created_at < to) {
+        chatUI.templateLI(data);
+      }
+    });
+  }
+});
+
+// let date = data.created_at.toDate();
+// let strDate = this.formatDate(date);
+
+// Delete message
+
+chatlist.addEventListener("click", e => {
+  e.preventDefault();
+  console.log(e);
+  if (e.target.tagName == "IMG") {
+    confirm("Are you sure you want to delete that message?");
+    e.target.parentElement.parentElement.parentElement.remove();
+  } else if (e.target.tagName == "IMG" && usernameLS == chatroom1.username) {
+    confirm("Are you sure you want to delete that message?");
+    e.target.parentElement.parentElement.parentElement.remove();
+    // db.collection("chats")
+    //   .doc()
+    //   .delete();
   }
 });

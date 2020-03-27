@@ -4,7 +4,8 @@ body {
   min-height: 100vh;
   height: 100%;
   width: 100%;
-  background-image: linear-gradient(white, #dd5e8885);
+  /* background-image: linear-gradient(white, #dd5e8885); */
+  background-color: white;
   font-family: "Baloo Da 2", cursive;
 }
 
@@ -54,28 +55,11 @@ h1 {
   border-radius: 12px 0px 12px 12px !important;
 }
 
-/* .btn {
-  width: 15%;
-  height: 40px;
-  font-size: 15px;
-  background-color: palevioletred;
-  color: antiquewhite;
-  border: 0;
-  border-radius: 5px;
-  margin-bottom: 2px;
-}
-
-.btn:hover {
-  background-color: rgb(201, 104, 136);
-  cursor: pointer;
-} */
-
 .btn {
   width: 15%;
   height: 40px;
   font-size: 15px;
   border: 0;
-  margin-bottom: 18px;
   text-align: center;
   transition: 0.5s;
   background-size: 200% auto;
@@ -87,6 +71,7 @@ h1 {
   cursor: pointer;
   border-radius: 15px;
   z-index: 3;
+  margin: 0 10px 0;
 }
 .btn:hover {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -108,7 +93,9 @@ form {
   margin: 15px;
 }
 
-input {
+input,
+.textarea {
+  font-family: "Baloo Da 2", cursive;
   width: 400px;
   height: 30px;
   font-size: 15px;
@@ -117,7 +104,8 @@ input {
   color: #dd5e89;
 }
 
-input:focus {
+input:focus,
+.textarea:focus {
   border: #dd5e88be solid 2px;
 }
 
@@ -161,4 +149,21 @@ input:focus,
 
 .btn-selected {
   background-color: rgb(127, 48, 134);
+}
+
+.textarea {
+  position: relative;
+  top: 19px;
+  outline: none;
+  border: solid rgba(128, 128, 128, 0.596) 2px;
+}
+
+#spanDate > input {
+  width: 190px;
+  position: relative;
+  right: 15px;
+}
+
+#bin {
+  float: right;
 }

@@ -27,7 +27,6 @@
         <button id="q&a" class="btn">#q&a</button>
       </nav>
     </div>
-
     <!--Message Window-->
     <section>
       <ul id="ulMessages">
@@ -36,14 +35,30 @@
     </section>
 
     <div id="bottom">
+      <!-- Color Picker -->
+      <form action="" id="formClr">
+        <input id="inputClr" type="color" value="#ffffff" />
+        <input type="submit" value="Change" id="btnColor" class="btn" />
+      </form>
+
+      <!-- Set Dates -->
+      <form action="" id="formSet">
+        <span id="spanDate">
+          <input id="from" type="date" /> <input id="to" type="date" />
+          <input type="submit" id="btnDate" value="Set Date" class="btn" />
+        </span>
+      </form>
+
       <!--Form - Message Input-->
       <form action="" id="formMessage">
-        <input
-          type="text"
-          name=""
+        <!-- prettier-ignore -->
+        <textarea
+          rows="2.5"
+          cols="55"
           id="inputMessage"
-          placeholder="Type your message..."
-        />
+          class="textarea"
+          placeholder="Your message..."
+        ></textarea>
         <input type="submit" value="Send" id="btnSend" class="btn" />
       </form>
 
