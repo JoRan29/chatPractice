@@ -51,7 +51,7 @@ export class ChatUI {
     htmlLI += `
     <span class="username">${data.username}:</span> 
     <span class="message">${data.message}</span>
-    <div class="date">${strDate} <span id="bin"><img width="25px" src="https://lh3.googleusercontent.com/proxy/X2xIlW7QpuSfNmFH2e6ODo3s8C_5QrsESxjZUESarpMPi5gMO4XiAU8XwLwglSz5VDUHB1RCVeOi6gobtTgTsRQ5E3096BmZiIDVWJjd1DUh4pKWoQ"> </span></div>
+    <div class="date">${strDate} <span id="bin"><img width="25px" src="https://cdn3.iconfinder.com/data/icons/cleaning-icons/512/Trash_Can-512.png"> </span></div>
     </li>`;
     this.list.innerHTML += htmlLI;
     this.list.scrollTop = this.list.scrollHeight;

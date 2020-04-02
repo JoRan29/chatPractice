@@ -1,0 +1,155 @@
+$mainFont: "Baloo Da 2", cursive;
+
+body {
+  text-align: center;
+  color: rgb(161, 5, 161);
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  font-family: $mainFont;
+}
+h1 {
+  -webkit-text-stroke: 0.5px #dd5e89;
+  -webkit-text-fill-color: #f7bb97;
+  font-size: 36px;
+  text-shadow: grey 2px 2px;
+}
+#ulMessages {
+  list-style-type: none;
+  font-size: 15px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 25%;
+  bottom: 20%;
+  overflow: hidden;
+  text-align: left;
+  width: 700px;
+  margin: 0 auto;
+  overflow-y: auto;
+  word-wrap: break-word;
+  > li {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-radius: 0px 12px 12px 12px;
+    width: 60%;
+    padding: 14px;
+    background-color: #dd5e88be;
+    color: white;
+  }
+}
+#ul {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.me {
+  margin-left: auto;
+  background-color: #f7bb97 !important;
+  border-radius: 12px 0px 12px 12px !important;
+}
+.btn {
+  width: 15%;
+  height: 40px;
+  font-size: 15px;
+  border: 0;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: #fff;
+  box-shadow: 0 0 10px #eee;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+  border-radius: 15px;
+  z-index: 3;
+  margin: 0 10px 0;
+  background-image: linear-gradient(
+    to right,
+    #dd5e89 0%,
+    #f7bb97 51%,
+    #dd5e89 100%
+  );
+  &:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    margin: 1px 3px 5px;
+    background-position: right center;
+  }
+  &:focus {
+    outline-width: 0;
+  }
+}
+form {
+  margin: 15px;
+}
+input {
+  font-family: $mainFont;
+  width: 400px;
+  height: 30px;
+  font-size: 15px;
+  border-radius: 5px;
+  padding: 5px;
+  color: #dd5e89;
+  &:focus {
+    border: #dd5e88be solid 2px;
+    outline-width: 0;
+  }
+}
+.textarea {
+  font-family: $mainFont;
+  width: 400px;
+  height: 30px;
+  font-size: 15px;
+  border-radius: 5px;
+  padding: 5px;
+  color: #dd5e89;
+  position: relative;
+  top: 19px;
+  outline: none;
+  border: solid rgba(128, 128, 128, 0.596) 2px;
+  &:focus {
+    border: #dd5e88be solid 2px;
+  }
+}
+.username {
+  font-weight: 700;
+}
+.date {
+  color: rgba(128, 128, 128, 0.5);
+}
+#top {
+  position: absolute;
+  height: 25%;
+  left: 0;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+}
+#bottom {
+  position: absolute;
+  height: 20%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#divUpdatedUsername {
+  font-size: 22px;
+}
+#spanUsername {
+  font-weight: bold;
+}
+.btn-selected {
+  background-color: rgb(127, 48, 134);
+}
+#spanDate {
+  > input {
+    width: 15%;
+    position: relative;
+    right: 33px;
+  }
+}
+#bin {
+  float: right;
+}
